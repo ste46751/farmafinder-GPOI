@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="FarmaFinder" company="FarmaFinder" webLink="altervista.it" view-date="2025-04-28" view-index="1" gantt-divider-location="300" resource-divider-location="300" version="3.1.3103" locale="it_IT">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="197" order="0"/>
+        <field id="tpd4" name="Data dinizio" width="50" order="1"/>
+        <field id="tpd5" name="Data di fine" width="49" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="210" order="0"/>
+        <field id="1" name="Ruolo predefinito" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" name="Analisi e Pianificazione" color="#8cb6ce" meeting="false" start="2025-01-01" duration="15" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+            <depend id="3" type="2" difference="5" hardness="Strong"/>
+            <depend id="4" type="2" difference="10" hardness="Strong"/>
+        </task>
+        <task id="2" name="Sviluppo Piattaforma Web" color="#8cb6ce" meeting="false" start="2025-01-22" duration="30" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" name="Sistema Verifica Età" color="#8cb6ce" meeting="false" start="2025-01-29" duration="30" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" name="Sistema Interazioni Farmacologiche" color="#8cb6ce" meeting="false" start="2025-02-05" duration="30" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="5" type="2" difference="-5" hardness="Strong"/>
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" name="Implementazione Catalogo" color="#8cb6ce" meeting="false" start="2025-03-12" duration="35" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="6" name="Testing e Sicurezza" color="#8cb6ce" meeting="false" start="2025-03-19" duration="30" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="7" name="Marketing e Lancio" color="#8cb6ce" meeting="false" start="2025-04-30" duration="30" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="8" name="Operazioni Post-Lancio" color="#8cb6ce" meeting="false" start="2025-06-11" duration="30" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true"/>
+        <task id="9" name="Presentazione del Progetto" color="#ff0000" meeting="true" start="2025-04-28" duration="0" complete="0" thirdDate="2025-01-01" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Stefano Quarti" function="1" contacts="altervista.it" phone=""/>
+        <resource id="1" name="Team Sviluppo" function="2" contacts="" phone=""/>
+        <resource id="2" name="Team Sicurezza" function="3" contacts="" phone=""/>
+        <resource id="3" name="Team Prodotti" function="4" contacts="" phone=""/>
+        <resource id="4" name="Team QA" function="5" contacts="" phone=""/>
+        <resource id="5" name="Team Marketing" function="6" contacts="" phone=""/>
+        <resource id="6" name="Consulente Farmaceutico" function="7" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="1" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="0" function="1" responsible="false" load="20.0"/>
+        <allocation task-id="8" resource-id="0" function="1" responsible="true" load="30.0"/>
+        <allocation task-id="2" resource-id="1" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="2" responsible="true" load="70.0"/>
+        <allocation task-id="8" resource-id="1" function="2" responsible="false" load="20.0"/>
+        <allocation task-id="3" resource-id="2" function="3" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="2" function="3" responsible="false" load="30.0"/>
+        <allocation task-id="5" resource-id="3" function="4" responsible="true" load="100.0"/>
+        <allocation task-id="8" resource-id="3" function="4" responsible="false" load="20.0"/>
+        <allocation task-id="6" resource-id="4" function="5" responsible="true" load="70.0"/>
+        <allocation task-id="7" resource-id="5" function="6" responsible="true" load="80.0"/>
+        <allocation task-id="8" resource-id="5" function="6" responsible="false" load="30.0"/>
+        <allocation task-id="4" resource-id="6" function="7" responsible="false" load="30.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name="Project Manager"/>
+        <role id="2" name="Sviluppatore"/>
+        <role id="3" name="Esperto Sicurezza"/>
+        <role id="4" name="Gestore Catalogo"/>
+        <role id="5" name="Tester"/>
+        <role id="6" name="Marketing"/>
+        <role id="7" name="Farmacista"/>
+        <role id="8" name="Legale"/>
+    </roles>
+</project>
